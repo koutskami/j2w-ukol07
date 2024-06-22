@@ -4,6 +4,7 @@
     <data-source source="LOCAL" name="blog" uuid="3e5c6265-97cf-4728-ba3d-fb6f2c994462">
       <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
       <jdbc-driver>org.h2.Driver</jdbc-driver>
       <jdbc-url>jdbc:h2:file:./data/blog;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE;COLLATION=CZECH</jdbc-url>
       <jdbc-additional-properties>
