@@ -19,7 +19,7 @@ public class PostService {
     public List<Post> findAll() {
         return postRepository.findAll();
     }
-    public Optional<Post> singlePost(String slug) {
-        return postRepository.findOne(slug);
-    }
+//    public List<Post> singlePost(String slug) {
+//        return postRepository.findBy(slug);
+//    }
 }
