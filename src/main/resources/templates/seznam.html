@@ -1,0 +1,13 @@
+[#ftl]
+[@c.page title="Blogové příspěvky"]
+<h1>Seznam příspěvků</h1>
+<div>
+    [#list prispevky.content]
+        [#items as prispevek]
+        <div>
+            <div>${}</div>
+        </div>
+        [/#items]
+    [/#list]
+</div>
+[/@c.page]
