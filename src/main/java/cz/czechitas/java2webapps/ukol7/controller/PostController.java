@@ -22,7 +22,7 @@ public class PostController {
 
     @GetMapping("/")
     public ModelAndView seznam(@PageableDefault(sort = {"published"}) Pageable pageable) {
-        return new ModelAndView("osoby")
-                .addObject("osoby", service.seznamOsob(pageable));
+        return new ModelAndView("seznam")
+                .addObject("seznam", service.seznamPrispevku(pageable));
     }
 }
