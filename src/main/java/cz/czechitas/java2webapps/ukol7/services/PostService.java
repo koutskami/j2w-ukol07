@@ -13,15 +13,14 @@ import java.util.List;
 @Service
 public class PostService {
     private final PostRepository postRepository;
-
+    @Autowired
     public PostService(PostRepository postRepository) {
         this.postRepository = postRepository;
     }
 
-    @Autowired
     public Page<Post> seznamPrispevku() {
-        Pageable pageable = PageRequest.of(0, 10);
-        return postRepository.findAll(pageable);
+        Pageable pageable = PageRequest.of(0, 20);
+        return postRepository.findAllOrderByPublished(pageable);
     }
 
     public Post singlePost(String slug) {
