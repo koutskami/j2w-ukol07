@@ -31,10 +31,10 @@ public class PostController {
                 .addObject("seznam", service.seznamPrispevku());
     }
 
-//    @GetMapping("/{id}")
-//    public ModelAndView detail(@PathVariable int id) {
-//        ModelAndView modelAndView = new ModelAndView("/post");
-//        modelAndView.addObject("prispevek", service.singlePost("clanek{id}"));
-//        return modelAndView;
-//    }
+    @GetMapping("/{id}")
+    public ModelAndView detail(@PathVariable String id) {
+        ModelAndView modelAndView = new ModelAndView("prispevek");
+        modelAndView.addObject("prispevek", service.singlePost(id));
+        return modelAndView;
+    }
 }

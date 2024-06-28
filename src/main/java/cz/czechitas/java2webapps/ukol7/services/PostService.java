@@ -24,7 +24,7 @@ public class PostService {
         return postRepository.findAll(pageable);
     }
 
-//    public List<Post> singlePost(String slug) {
-//        return postRepository.findBy(slug);
-//    }
+    public Post singlePost(String slug) {
+        return postRepository.findBySlug(slug);
+    }
 }
