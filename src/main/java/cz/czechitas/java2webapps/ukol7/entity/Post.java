@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 public class Post {
@@ -21,7 +21,7 @@ public class Post {
     private String title;
     private String perex;
     private String body;
-    private Date published;
+    private LocalDate published;
 
     public void setId(Long id) {
         this.id = id;
@@ -71,11 +71,11 @@ public class Post {
         this.body = body;
     }
 
-    public Date getPublished() {
+    public LocalDate getPublished() {
         return published;
     }
 
-    public void setPublished(Date published) {
+    public void setPublished(LocalDate published) {
         this.published = published;
     }
 }

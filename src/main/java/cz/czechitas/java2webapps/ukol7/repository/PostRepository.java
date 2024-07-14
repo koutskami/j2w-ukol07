@@ -14,6 +14,5 @@ import java.util.Date;
 public interface PostRepository extends JpaRepository<Post, Long> {
     Post findBySlug(String slug);
 
-    @Query("SELECT p FROM Post p  ORDER BY p.published DESC")
-    Page<Post> findAllOrderByPublished(Pageable pageable);
+    Page<Post> findAllByOrderByPublished(Pageable pageable);
 }

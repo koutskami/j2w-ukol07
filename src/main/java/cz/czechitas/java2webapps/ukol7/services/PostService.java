@@ -20,7 +20,7 @@ public class PostService {
 
     public Page<Post> seznamPrispevku() {
         Pageable pageable = PageRequest.of(0, 20);
-        return postRepository.findAllOrderByPublished(pageable);
+        return postRepository.findAllByOrderByPublished(pageable);
     }
 
     public Post singlePost(String slug) {
